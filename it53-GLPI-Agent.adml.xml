@@ -13,8 +13,9 @@
         If the given value start with http:// or https://, it is assumed to be an URL, and used directly.
         Otherwise, it is assumed to be an hostname, and interpreted as http://hostname/inventory.
         Multiple values can be specified, using a comma as a separator.
-        Warning
-        Using multiple targets implies multiple executions of the same inventory ; 
+        
+        Warning:
+        Using multiple targets implies multiple executions of the same inventory; 
         this is not just a matter of targets. This can lead to different results, see Multiple execution targets.
       </string>
       <string id="Pol-it53-GLPI-Agent-EWS_Port">Embedded web interface port</string>
@@ -30,7 +31,7 @@
     <presentationTable>
       <presentation id="Pol-it53-GLPI-Agent-Server">
         <textBox refId="TXT-it53-GLPI-Agent-Server">
-          <label>Server</label>
+          <label>Address GLPI server</label>
           <defaultValue>https://glpi.server.local</defaultValue>
         </textBox>
       </presentation>

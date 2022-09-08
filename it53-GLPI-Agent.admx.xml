@@ -17,25 +17,33 @@
     </category>
   </categories>
   <policies>
-    <policy name="Pol-it53-GLPI-Agent-Server" class="Machine" displayName="$(string.Pol-it53-GLPI-Agent-Server)" explainText="$(string.Pol-it53-GLPI-Agent-Server_Help)" presentation="$(presentation.Pol-it53-GLPI-Agent-Server)" key="SOFTWARE\GLPI-Agent" valueName="server">
+
+    <!-- GLPI-Agent-Address_GLPI_server -->
+    <policy name="Pol-it53-GLPI-Agent-Server"
+            class="Machine"
+            displayName="$(string.Pol-it53-GLPI-Agent-Server)"
+            explainText="$(string.Pol-it53-GLPI-Agent-Server_Help)"
+            presentation="$(presentation.Pol-it53-GLPI-Agent-Server)"
+            key="SOFTWARE\GLPI-Agent"
+            valueName="server">
       <parentCategory ref="Cat-it53-GLPI-Agent" />
       <supportedOn ref="SUPPORTED_WindowsVista" />
       <elements>
         <text id="TXT-it53-GLPI-Agent-Server" key="SOFTWARE\GLPI-Agent" valueName="server" />
       </elements>
     </policy>
-    <policy name="Pol-it53-GLPI-Agent-EWS_Port" class="Machine" displayName="$(string.Pol-it53-GLPI-Agent-EWS_Port)" explainText="$(string.Pol-it53-GLPI-Agent-EWS_Port_Help)" presentation="$(presentation.Pol-it53-GLPI-Agent-EWS_Port)" key="SOFTWARE\GLPI-Agent" valueName="httpd-port">
+    <!-- GLPI-Agent-EWS_Port -->
+    <policy name="Pol-it53-GLPI-Agent-EWS_Port" 
+            class="Machine" 
+            displayName="$(string.Pol-it53-GLPI-Agent-EWS_Port)" 
+            explainText="$(string.Pol-it53-GLPI-Agent-EWS_Port_Help)" 
+            presentation="$(presentation.Pol-it53-GLPI-Agent-EWS_Port)" 
+            key="SOFTWARE\GLPI-Agent" 
+            valueName="httpd-port">
       <parentCategory ref="Cat-it53-GLPI-Agent" />
-      <supportedOn ref="TS_SUPPORTED_WindowsXP" />
-      <enabledList>
-        <item key="SOFTWARE\GLPI-Agent" valueName="httpd-port">
-          <value>
-            <string>1</string>
-          </value>
-        </item>
-      </enabledList>
+      <supportedOn ref="SUPPORTED_WindowsVista" />
       <elements>
-        <text id="TXT-it53-GLPI-Agent-EWS_port" key="SOFTWARE\GLPI-Agent" valueName="httpd-port" />
+        <text id="TXT-it53-GLPI-Agent-EWS_port" key="SOFTWARE\GLPI-Agent" valueName="httpd-port" required="true"/>
       </elements>
     </policy>
     <policy name="Pol-it53-GLPI-Agent-Certificate_Check" class="Machine" displayName="$(string.Pol-it53-GLPI-Agent-Certificate_Check)" explainText="$(string.Pol-it53-GLPI-Agent-Certificate_Check_Help)" key="SOFTWARE\GLPI-Agent" valueName="no-ssl-check">
