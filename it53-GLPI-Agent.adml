@@ -1,0 +1,54 @@
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName>
+  </displayName>
+  <description>
+  </description>
+  <resources>
+    <stringTable>
+      <string id="CAT_19EC422F_B4BB_48E6_8F82_00C287ABD7BA">IT53</string>
+      <string id="CAT_B33C3396_9567_4BCB_825F_43C204120A21">GLPI-Agent</string>
+      <string id="POL_ED4727E4_BB3B_4AC3_8906_07D313BABE34">Address GLPI server</string>
+      <string id="POL_ED4727E4_BB3B_4AC3_8906_07D313BABE34_Help">Specifies the server to use both as a controller for the agent, and as a recipient for task execution output.
+
+If the given value start with http:// or https://, it is assumed to be an URL, and used directly. Otherwise, it is assumed to be an hostname, and interpreted as http://hostname/inventory.
+
+Multiple values can be specified, using a comma as a separator.
+
+Warning
+
+Using multiple targets implies multiple executions of the same inventory ; this is not just a matter of targets. This can lead to different results, see Multiple execution targets.</string>
+      <string id="POL_9F67F62A_C882_4438_9FA0_32804A394636">Embedded web interface port</string>
+      <string id="POL_9F67F62A_C882_4438_9FA0_32804A394636_Help">Specifies the network port to use for the embedded web interface. The default is 62354.</string>
+      <string id="TS_SUPPORTED_WindowsXP">At least Microsoft Windows XP</string>
+      <string id="SUPPORTED_WindowsVista">At least Microsoft Windows Vista</string>
+      <string id="POL_E5C62D97_6239_4E25_BB68_1A82D537B957">GLPI server SSL certificate validation</string>
+      <string id="POL_E5C62D97_6239_4E25_BB68_1A82D537B957_Help">Disables server SSL certificate validation. The default is false.</string>
+      <string id="POL_84A8B8E2_3939_4221_B284_1D45C2871978">Embedded web interface</string>
+      <string id="POL_84A8B8E2_3939_4221_B284_1D45C2871978_Help">Embedded web interface, used to receive execution requests from the GLPI server or serve httpd plugins. The default is Enabled.</string>
+      <string id="POL_0031486B_CFB0_49F9_998F_53D4BA0BFACB">Embedded web interface listen on</string>
+      <string id="POL_0031486B_CFB0_49F9_998F_53D4BA0BFACB_Help">Specifies the network interface to use for the embedded web interface. The default is 0.0.0.0 to use all available ones.</string>
+      <string id="POL_8569D2F3_774E_4339_B73B_7712E3A2E088">Test</string>
+      <string id="POL_8569D2F3_774E_4339_B73B_7712E3A2E088_Help">sdfds</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="POL_ED4727E4_BB3B_4AC3_8906_07D313BABE34">
+        <textBox refId="TXT_158057DE_C90F_4D86_8747_C196A9F627EB">
+          <label>Server</label>
+          <defaultValue>https://glpi.server.local</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="POL_9F67F62A_C882_4438_9FA0_32804A394636">
+        <textBox refId="TXT_00110A4D_7469_4D77_AAB1_5F4911A05C62">
+          <label>Port embedded web interface of GLPI agent</label>
+          <defaultValue>62354</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="POL_0031486B_CFB0_49F9_998F_53D4BA0BFACB">
+        <textBox refId="TXT_DCFC59F4_837C_450C_A497_B4EC7E416FAE">
+          <label>Listen on network interface</label>
+          <defaultValue>0.0.0.0</defaultValue>
+        </textBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

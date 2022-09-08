@@ -1,0 +1,90 @@
+<policyDefinitions revision="1.0" schemaVersion="1.0">
+  <policyNamespaces>
+    <target prefix="fullarmor" namespace="FullArmor.Policies.3C3DE29C_B49C_4EC3_9D2F_598181F847E8" />
+    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+  </policyNamespaces>
+  <supersededAdm fileName="" />
+  <resources minRequiredRevision="1.0" />
+  <supportedOn>
+    <definitions>
+      <definition name="TS_SUPPORTED_WindowsXP" displayName="$(string.TS_SUPPORTED_WindowsXP)" />
+      <definition name="SUPPORTED_WindowsVista" displayName="$(string.SUPPORTED_WindowsVista)" />
+    </definitions>
+  </supportedOn>
+  <categories>
+    <category name="CAT_19EC422F_B4BB_48E6_8F82_00C287ABD7BA" displayName="$(string.CAT_19EC422F_B4BB_48E6_8F82_00C287ABD7BA)" />
+    <category name="CAT_B33C3396_9567_4BCB_825F_43C204120A21" displayName="$(string.CAT_B33C3396_9567_4BCB_825F_43C204120A21)">
+      <parentCategory ref="CAT_19EC422F_B4BB_48E6_8F82_00C287ABD7BA" />
+    </category>
+  </categories>
+  <policies>
+    <policy name="POL_ED4727E4_BB3B_4AC3_8906_07D313BABE34" class="Machine" displayName="$(string.POL_ED4727E4_BB3B_4AC3_8906_07D313BABE34)" explainText="$(string.POL_ED4727E4_BB3B_4AC3_8906_07D313BABE34_Help)" presentation="$(presentation.POL_ED4727E4_BB3B_4AC3_8906_07D313BABE34)" key="SOFTWARE\GLPI-Agent" valueName="server">
+      <parentCategory ref="CAT_B33C3396_9567_4BCB_825F_43C204120A21" />
+      <supportedOn ref="SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="TXT_158057DE_C90F_4D86_8747_C196A9F627EB" key="SOFTWARE\GLPI-Agent" valueName="server" />
+      </elements>
+    </policy>
+    <policy name="POL_9F67F62A_C882_4438_9FA0_32804A394636" class="Machine" displayName="$(string.POL_9F67F62A_C882_4438_9FA0_32804A394636)" explainText="$(string.POL_9F67F62A_C882_4438_9FA0_32804A394636_Help)" presentation="$(presentation.POL_9F67F62A_C882_4438_9FA0_32804A394636)" key="SOFTWARE\GLPI-Agent" valueName="httpd-port">
+      <parentCategory ref="CAT_B33C3396_9567_4BCB_825F_43C204120A21" />
+      <supportedOn ref="TS_SUPPORTED_WindowsXP" />
+      <enabledList>
+        <item key="SOFTWARE\GLPI-Agent" valueName="httpd-port">
+          <value>
+            <string>1</string>
+          </value>
+        </item>
+      </enabledList>
+      <elements>
+        <text id="TXT_00110A4D_7469_4D77_AAB1_5F4911A05C62" key="SOFTWARE\GLPI-Agent" valueName="httpd-port" />
+      </elements>
+    </policy>
+    <policy name="POL_E5C62D97_6239_4E25_BB68_1A82D537B957" class="Machine" displayName="$(string.POL_E5C62D97_6239_4E25_BB68_1A82D537B957)" explainText="$(string.POL_E5C62D97_6239_4E25_BB68_1A82D537B957_Help)" key="SOFTWARE\GLPI-Agent" valueName="no-ssl-check">
+      <parentCategory ref="CAT_B33C3396_9567_4BCB_825F_43C204120A21" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledList>
+        <item key="SOFTWARE\GLPI-Agent" valueName="no-ssl-check">
+          <value>
+            <string>0</string>
+          </value>
+        </item>
+      </enabledList>
+      <disabledList>
+        <item key="SOFTWARE\GLPI-Agent" valueName="no-ssl-check">
+          <value>
+            <string>1</string>
+          </value>
+        </item>
+      </disabledList>
+    </policy>
+    <policy name="POL_84A8B8E2_3939_4221_B284_1D45C2871978" class="Machine" displayName="$(string.POL_84A8B8E2_3939_4221_B284_1D45C2871978)" explainText="$(string.POL_84A8B8E2_3939_4221_B284_1D45C2871978_Help)" key="SOFTWARE\GLPI-Agent" valueName="no-httpd">
+      <parentCategory ref="CAT_B33C3396_9567_4BCB_825F_43C204120A21" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledList>
+        <item key="SOFTWARE\GLPI-Agent" valueName="no-httpd">
+          <value>
+            <string>0</string>
+          </value>
+        </item>
+      </enabledList>
+      <disabledList>
+        <item key="SOFTWARE\GLPI-Agent" valueName="no-httpd">
+          <value>
+            <string>1</string>
+          </value>
+        </item>
+      </disabledList>
+    </policy>
+    <policy name="POL_0031486B_CFB0_49F9_998F_53D4BA0BFACB" class="Machine" displayName="$(string.POL_0031486B_CFB0_49F9_998F_53D4BA0BFACB)" explainText="$(string.POL_0031486B_CFB0_49F9_998F_53D4BA0BFACB_Help)" presentation="$(presentation.POL_0031486B_CFB0_49F9_998F_53D4BA0BFACB)" key="SOFTWARE\GLPI-Agent" valueName="httpd-ip">
+      <parentCategory ref="CAT_B33C3396_9567_4BCB_825F_43C204120A21" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="TXT_DCFC59F4_837C_450C_A497_B4EC7E416FAE" key="SOFTWARE\GLPI-Agent" valueName="httpd-ip" />
+      </elements>
+    </policy>
+    <policy name="POL_8569D2F3_774E_4339_B73B_7712E3A2E088" class="Machine" displayName="$(string.POL_8569D2F3_774E_4339_B73B_7712E3A2E088)" explainText="$(string.POL_8569D2F3_774E_4339_B73B_7712E3A2E088_Help)" key="Software\Policies\Microsoft\Windows\System" valueName="Test1">
+      <parentCategory ref="CAT_B33C3396_9567_4BCB_825F_43C204120A21" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+    </policy>
+  </policies>
+</policyDefinitions>
