@@ -1,3 +1,7 @@
+<!-- 
+    version 1
+    "Software\Policies\GLPI\Agent\1.4" uses only for store Group Policy Editor settings
+-->
 <policyDefinitions revision="1.0" schemaVersion="1.0">
   <policyNamespaces>
     <target prefix="IT53" namespace="IT53.Policies.3C3DE29C_B49C_4EC3_9D2F_598181F847E8" />
@@ -24,7 +28,7 @@
             displayName="$(string.Pol-it53-GLPI-Agent-Server)"
             explainText="$(string.Pol-it53-GLPI-Agent-Server_Help)"
             presentation="$(presentation.Pol-it53-GLPI-Agent-Server)"
-            key="SOFTWARE\GLPI-Agent"
+            key="Software\Policies\GLPI\Agent\1.4"
             valueName="server">
       <parentCategory ref="Cat-it53-GLPI-Agent" />
       <supportedOn ref="SUPPORTED_ProductOnly" />
@@ -38,7 +42,7 @@
             displayName="$(string.Pol-it53-GLPI-Agent-EWS_Port)" 
             explainText="$(string.Pol-it53-GLPI-Agent-EWS_Port_Help)" 
             presentation="$(presentation.Pol-it53-GLPI-Agent-EWS_Port)" 
-            key="SOFTWARE\GLPI-Agent" 
+            key="Software\Policies\GLPI\Agent\1.4"
             valueName="httpd-port">
       <parentCategory ref="Cat-it53-GLPI-Agent" />
       <supportedOn ref="SUPPORTED_ProductOnly" />
@@ -48,7 +52,12 @@
     </policy>
     <!-- GLPI-Agent-Check GLPI server certificate -->
     
-    <policy name="Pol-it53-GLPI-Agent-Certificate_Check" class="Machine" displayName="$(string.Pol-it53-GLPI-Agent-Certificate_Check)" explainText="$(string.Pol-it53-GLPI-Agent-Certificate_Check_Help)" key="SOFTWARE\GLPI-Agent" valueName="no-ssl-check">
+    <policy name="Pol-it53-GLPI-Agent-Certificate_Check"
+            class="Machine" 
+            displayName="$(string.Pol-it53-GLPI-Agent-Certificate_Check)" 
+            explainText="$(string.Pol-it53-GLPI-Agent-Certificate_Check_Help)" 
+            key="Software\Policies\GLPI\Agent\1.4"
+            valueName="no-ssl-check">
       <parentCategory ref="Cat-it53-GLPI-Agent" />
       <supportedOn ref="SUPPORTED_ProductOnly" />
       <enabledList>
@@ -66,7 +75,12 @@
         </item>
       </disabledList>
     </policy>
-    <policy name="Pol-it53-GLPI-Agent-EmbeddedWebService" class="Machine" displayName="$(string.Pol-it53-GLPI-Agent-EmbeddedWebService)" explainText="$(string.Pol-it53-GLPI-Agent-EmbeddedWebService_Help)" key="SOFTWARE\GLPI-Agent" valueName="no-httpd">
+    <policy name="Pol-it53-GLPI-Agent-EmbeddedWebService" 
+            class="Machine" 
+            displayName="$(string.Pol-it53-GLPI-Agent-EmbeddedWebService)" 
+            explainText="$(string.Pol-it53-GLPI-Agent-EmbeddedWebService_Help)" 
+            key="Software\Policies\GLPI\Agent\1.4"
+            valueName="no-httpd">
       <parentCategory ref="Cat-it53-GLPI-Agent" />
       <supportedOn ref="SUPPORTED_ProductOnly" />
       <enabledList>
@@ -84,7 +98,13 @@
         </item>
       </disabledList>
     </policy>
-    <policy name="Pol-it53-GLPI-Agent-EWS_listenInterface" class="Machine" displayName="$(string.Pol-it53-GLPI-Agent-EWS_listenInterface)" explainText="$(string.Pol-it53-GLPI-Agent-EWS_listenInterface_Help)" presentation="$(presentation.Pol-it53-GLPI-Agent-EWS_listenInterface)" key="SOFTWARE\GLPI-Agent" valueName="httpd-ip">
+    <policy name="Pol-it53-GLPI-Agent-EWS_listenInterface" 
+            class="Machine" 
+            displayName="$(string.Pol-it53-GLPI-Agent-EWS_listenInterface)" 
+            explainText="$(string.Pol-it53-GLPI-Agent-EWS_listenInterface_Help)" 
+            presentation="$(presentation.Pol-it53-GLPI-Agent-EWS_listenInterface)" 
+            key="Software\Policies\GLPI\Agent\1.4"
+            valueName="httpd-ip">
       <parentCategory ref="Cat-it53-GLPI-Agent" />
       <supportedOn ref="SUPPORTED_ProductOnly" />
       <elements>
