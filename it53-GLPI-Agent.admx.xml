@@ -41,7 +41,7 @@
             key="SOFTWARE\GLPI-Agent" 
             valueName="httpd-port">
       <parentCategory ref="Cat-it53-GLPI-Agent" />
-      <supportedOn ref="SUPPORTED_WindowsVista" />
+      <supportedOn ref="SUPPORTED_ProductOnly" />
       <elements>
         <text id="TXT-it53-GLPI-Agent-EWS_port" key="SOFTWARE\GLPI-Agent" valueName="httpd-port" required="true"/>
       </elements>
@@ -50,7 +50,7 @@
     
     <policy name="Pol-it53-GLPI-Agent-Certificate_Check" class="Machine" displayName="$(string.Pol-it53-GLPI-Agent-Certificate_Check)" explainText="$(string.Pol-it53-GLPI-Agent-Certificate_Check_Help)" key="SOFTWARE\GLPI-Agent" valueName="no-ssl-check">
       <parentCategory ref="Cat-it53-GLPI-Agent" />
-      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <supportedOn ref="SUPPORTED_ProductOnly" />
       <enabledList>
         <item key="SOFTWARE\GLPI-Agent" valueName="no-ssl-check">
           <value>
@@ -68,7 +68,7 @@
     </policy>
     <policy name="Pol-it53-GLPI-Agent-EmbeddedWebService" class="Machine" displayName="$(string.Pol-it53-GLPI-Agent-EmbeddedWebService)" explainText="$(string.Pol-it53-GLPI-Agent-EmbeddedWebService_Help)" key="SOFTWARE\GLPI-Agent" valueName="no-httpd">
       <parentCategory ref="Cat-it53-GLPI-Agent" />
-      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <supportedOn ref="SUPPORTED_ProductOnly" />
       <enabledList>
         <item key="SOFTWARE\GLPI-Agent" valueName="no-httpd">
           <value>
@@ -86,7 +86,7 @@
     </policy>
     <policy name="Pol-it53-GLPI-Agent-EWS_listenInterface" class="Machine" displayName="$(string.Pol-it53-GLPI-Agent-EWS_listenInterface)" explainText="$(string.Pol-it53-GLPI-Agent-EWS_listenInterface_Help)" presentation="$(presentation.Pol-it53-GLPI-Agent-EWS_listenInterface)" key="SOFTWARE\GLPI-Agent" valueName="httpd-ip">
       <parentCategory ref="Cat-it53-GLPI-Agent" />
-      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <supportedOn ref="SUPPORTED_ProductOnly" />
       <elements>
         <text id="TXT-it53-GLPI-Agent-EWS_listenInterface" key="SOFTWARE\GLPI-Agent" valueName="httpd-ip" />
       </elements>
