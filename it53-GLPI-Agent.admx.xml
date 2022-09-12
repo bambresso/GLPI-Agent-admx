@@ -7,7 +7,7 @@
   <resources minRequiredRevision="1.0" />
   <supportedOn>
     <definitions>
-      <definition name="SUPPORTED_WindowsVista" displayName="$(string.SUPPORTED_WindowsVista)" />
+      <definition name="SUPPORTED_ProductOnly" displayName="$(string.SUPPORTED_ProductOnly)" />
     </definitions>
   </supportedOn>
   <categories>
@@ -27,7 +27,7 @@
             key="SOFTWARE\GLPI-Agent"
             valueName="server">
       <parentCategory ref="Cat-it53-GLPI-Agent" />
-      <supportedOn ref="SUPPORTED_WindowsVista" />
+      <supportedOn ref="SUPPORTED_ProductOnly" />
       <elements>
         <text id="TXT-it53-GLPI-Agent-Server" key="SOFTWARE\GLPI-Agent" valueName="server" />
       </elements>
@@ -46,6 +46,8 @@
         <text id="TXT-it53-GLPI-Agent-EWS_port" key="SOFTWARE\GLPI-Agent" valueName="httpd-port" required="true"/>
       </elements>
     </policy>
+    <!-- GLPI-Agent-Check GLPI server certificate -->
+    
     <policy name="Pol-it53-GLPI-Agent-Certificate_Check" class="Machine" displayName="$(string.Pol-it53-GLPI-Agent-Certificate_Check)" explainText="$(string.Pol-it53-GLPI-Agent-Certificate_Check_Help)" key="SOFTWARE\GLPI-Agent" valueName="no-ssl-check">
       <parentCategory ref="Cat-it53-GLPI-Agent" />
       <supportedOn ref="windows:SUPPORTED_WindowsVista" />

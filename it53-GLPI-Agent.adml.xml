@@ -5,6 +5,7 @@
   </description>
   <resources>
     <stringTable>
+      <string id="SUPPORTED_ProductOnly">GLPI Agent 1.4</string>
       <string id="Cat-it53-MainCategory">IT53</string>
       <string id="Cat-it53-GLPI-Agent">GLPI-Agent</string>
       <string id="Pol-it53-GLPI-Agent-Server">Address GLPI server</string>
@@ -20,7 +21,6 @@
       </string>
       <string id="Pol-it53-GLPI-Agent-EWS_Port">Embedded web interface port</string>
       <string id="Pol-it53-GLPI-Agent-EWS_Port_Help">Specifies the network port to use for the embedded web interface. The default is 62354.</string>
-      <string id="SUPPORTED_WindowsVista">At least Microsoft Windows Vista</string>
       <string id="Pol-it53-GLPI-Agent-Certificate_Check">GLPI server SSL certificate validation</string>
       <string id="Pol-it53-GLPI-Agent-Certificate_Check_Help">Disables server SSL certificate validation. The default is false.</string>
       <string id="Pol-it53-GLPI-Agent-EmbeddedWebService">Embedded web interface</string>
