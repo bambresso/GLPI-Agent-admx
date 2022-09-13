@@ -145,6 +145,20 @@
         </enum>
       </elements>
     </policy>
+    <!-- GLPI-Agent-Delay-Time -->
+    <policy name="Pol-it53-GLPI-Agent-Delay-Time" 
+            class="Machine" 
+            displayName="$(string.Pol-it53-GLPI-Agent-Delay-Time)" 
+            explainText="$(string.Pol-it53-GLPI-Agent-Delay-Time_Help)" 
+            presentation="$(presentation.Pol-it53-GLPI-Agent-Delay-Time)" 
+            key="Software\Policies\GLPI\Agent\1.4"
+            valueName="httpd-ip">
+      <parentCategory ref="Cat-it53-GLPI-Agent" />
+      <supportedOn ref="SUPPORTED_ProductOnly" />
+      <elements>
+        <text id="TXT-it53-GLPI-Agent-Delay-Time" key="SOFTWARE\GLPI-Agent" valueName="delaytime" />
+      </elements>
+    </policy>
 
 
   </policies>

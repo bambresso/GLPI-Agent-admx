@@ -27,7 +27,6 @@
       <string id="Pol-it53-GLPI-Agent-EmbeddedWebService_Help">Embedded web interface, used to receive execution requests from the GLPI server or serve httpd plugins. The default is Enabled.</string>
       <string id="Pol-it53-GLPI-Agent-EWS_listenInterface">Embedded web interface listen on</string>
       <string id="Pol-it53-GLPI-Agent-EWS_listenInterface_Help">Specifies the network interface to use for the embedded web interface. The default is 0.0.0.0 to use all available ones.</string>
-
       <string id="Pol-it53-GLPI-Agent-Debug-level">Agent-Debug-level</string>
       <string id="Pol-it53-GLPI-Agent-Debug-level_Help">
         Specifies the level of verbosity for log content.
@@ -38,6 +37,13 @@
       <string id="Pol-it53-GLPI-Agent-Debug-0">Basic</string>
       <string id="Pol-it53-GLPI-Agent-Debug-1">Extended</string>
       <string id="Pol-it53-GLPI-Agent-Debug-2">Exchanged with traces</string>
+      <string id="Pol-it53-GLPI-Agent-Delay-Time">Initial delay before contacting the control server</string>
+      <string id="Pol-it53-GLPI-Agent-Delay-Time_Help">
+        Specifies the upper limit, in seconds, for the initial delay before contacting the control server. 
+        The actual delay is computed randomly between TIME / 2 and TIME seconds.
+        This directive is used for initial contact only, and ignored thereafter in favor of server-provided value in response from prolog or Contact request.
+      </string>
+
     </stringTable>
     <presentationTable>
       <presentation id="Pol-it53-GLPI-Agent-Server">
@@ -62,6 +68,15 @@
           <dropdownList refId="GLPI-Agent-Debug-level-Drop" defaultItem="1">Choose debug level:</dropdownList>
           <text>Default level: Basic</text>
         </presentation>
-    </presentationTable>
+        <presentation id="Pol-it53-GLPI-Agent-Delay-Time">
+          <textBox refId="TXT-it53-GLPI-Agent-Delay-Time">
+            <label>Delay before contacting the control server.</label>
+            <defaultValue>3600</defaultValue>
+          </textBox>
+          <text>The default is 3600.</text>
+        </presentation>
+  
+
+      </presentationTable>
   </resources>
 </policyDefinitionResources>
