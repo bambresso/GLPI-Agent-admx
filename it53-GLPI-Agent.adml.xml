@@ -43,6 +43,10 @@
         The actual delay is computed randomly between TIME / 2 and TIME seconds.
         This directive is used for initial contact only, and ignored thereafter in favor of server-provided value in response from prolog or Contact request.
       </string>
+      <string id="Pol-it53-GLPI-Agent-Server-Fingerprint">Specifies the fingerprint of the ssl server certificate to trust.</string>
+      <string id="Pol-it53-GLPI-Agent-Server-Fingerprint_Help">
+        The fingerprint of GLPI server certificate.
+      </string>
 
     </stringTable>
     <presentationTable>
@@ -74,6 +78,13 @@
             <defaultValue>3600</defaultValue>
           </textBox>
           <text>The default is 3600.</text>
+        </presentation>
+        <presentation id="Pol-it53-GLPI-Agent-Server-Fingerprint">
+          <textBox refId="TXT-it53-GLPI-Agent-Server-Fingerprint">
+            <label>Server-Fingerprint</label>
+            <defaultValue>Enter fingerprint of certificate</defaultValue>
+          </textBox>
+          <text>When enable server SSL certificate validation.</text>
         </presentation>
   
 
