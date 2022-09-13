@@ -129,17 +129,17 @@
           valueName="debug">
           <item displayName="$(string.Pol-it53-GLPI-Agent-Debug-0)">
             <value>
-              <decimal value="0" />
+              <string>0</string>
             </value>
           </item>
           <item displayName="$(string.Pol-it53-GLPI-Agent-Debug-1)">
             <value>
-              <decimal value="1" />
+              <string>1</string>
             </value>
           </item>
           <item displayName="$(string.Pol-it53-GLPI-Agent-Debug-2)">
             <value>
-              <decimal value="2" />
+              <string>2</string>
             </value>
           </item>
         </enum>
