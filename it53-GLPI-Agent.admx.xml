@@ -51,7 +51,6 @@
       </elements>
     </policy>
     <!-- GLPI-Agent-Check GLPI server certificate -->
-    
     <policy name="Pol-it53-GLPI-Agent-Certificate_Check"
             class="Machine" 
             displayName="$(string.Pol-it53-GLPI-Agent-Certificate_Check)" 
@@ -75,6 +74,7 @@
         </item>
       </disabledList>
     </policy>
+    <!-- GLPI-Agent-Embedded web interface -->
     <policy name="Pol-it53-GLPI-Agent-EmbeddedWebService" 
             class="Machine" 
             displayName="$(string.Pol-it53-GLPI-Agent-EmbeddedWebService)" 
@@ -98,6 +98,7 @@
         </item>
       </disabledList>
     </policy>
+    <!-- GLPI-Agent-Embedded web interface listen on -->
     <policy name="Pol-it53-GLPI-Agent-EWS_listenInterface" 
             class="Machine" 
             displayName="$(string.Pol-it53-GLPI-Agent-EWS_listenInterface)" 
@@ -111,5 +112,40 @@
         <text id="TXT-it53-GLPI-Agent-EWS_listenInterface" key="SOFTWARE\GLPI-Agent" valueName="httpd-ip" />
       </elements>
     </policy>
+    <!-- GLPI-Agent-Debug level -->
+    <policy name="Pol-it53-GLPI-Agent-Debug-level" 
+            class="Machine" 
+            displayName="$(string.Pol-it53-GLPI-Agent-Debug-level)" 
+            explainText="$(string.Pol-it53-GLPI-Agent-Debug-level_Help)" 
+            presentation="$(presentation.Pol-it53-GLPI-Agent-Debug-level)" 
+            key="Software\Policies\GLPI\Agent\1.4"
+            valueName="debug">
+      <parentCategory ref="Cat-it53-GLPI-Agent" />
+      <supportedOn ref="SUPPORTED_ProductOnly" />
+      <elements>
+        <enum
+          id="GLPI-Agent-Debug-level-Drop"
+          key="SOFTWARE\GLPI-Agent"
+          valueName="debug">
+          <item displayName="$(string.Pol-it53-GLPI-Agent-Debug-0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.Pol-it53-GLPI-Agent-Debug-1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.Pol-it53-GLPI-Agent-Debug-2)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+
+
   </policies>
 </policyDefinitions>

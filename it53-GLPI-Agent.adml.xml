@@ -27,6 +27,17 @@
       <string id="Pol-it53-GLPI-Agent-EmbeddedWebService_Help">Embedded web interface, used to receive execution requests from the GLPI server or serve httpd plugins. The default is Enabled.</string>
       <string id="Pol-it53-GLPI-Agent-EWS_listenInterface">Embedded web interface listen on</string>
       <string id="Pol-it53-GLPI-Agent-EWS_listenInterface_Help">Specifies the network interface to use for the embedded web interface. The default is 0.0.0.0 to use all available ones.</string>
+
+      <string id="Pol-it53-GLPI-Agent-Debug-level">Agent-Debug-level</string>
+      <string id="Pol-it53-GLPI-Agent-Debug-level_Help">
+        Specifies the level of verbosity for log content.
+        Basic agent processing
+        Extended agent processing
+        Messages exchanged with the server and activates traces from Net::SSLeay if used
+      </string>
+      <string id="Pol-it53-GLPI-Agent-Debug-0">Basic</string>
+      <string id="Pol-it53-GLPI-Agent-Debug-1">Extended</string>
+      <string id="Pol-it53-GLPI-Agent-Debug-2">Exchanged with traces</string>
     </stringTable>
     <presentationTable>
       <presentation id="Pol-it53-GLPI-Agent-Server">
@@ -47,6 +58,10 @@
           <defaultValue>0.0.0.0</defaultValue>
         </textBox>
       </presentation>
+      <presentation id="Pol-it53-GLPI-Agent-Debug-level">
+          <dropdownList refId="GLPI-Agent-Debug-level-Drop" defaultItem="1">Choose debug level:</dropdownList>
+          <text>Default level: Basic</text>
+        </presentation>
     </presentationTable>
   </resources>
 </policyDefinitionResources>
