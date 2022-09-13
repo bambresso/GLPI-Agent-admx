@@ -43,9 +43,16 @@
         The actual delay is computed randomly between TIME / 2 and TIME seconds.
         This directive is used for initial contact only, and ignored thereafter in favor of server-provided value in response from prolog or Contact request.
       </string>
-      <string id="Pol-it53-GLPI-Agent-Server-Fingerprint">Specifies the fingerprint of the ssl server certificate to trust.</string>
+      <string id="Pol-it53-GLPI-Agent-Server-Fingerprint">Specifies the fingerprint of the ssl server certificate to trust</string>
       <string id="Pol-it53-GLPI-Agent-Server-Fingerprint_Help">
         The fingerprint of GLPI server certificate.
+      </string>
+      <string id="Pol-it53-GLPI-Agent-Tag">Specifies name on tag</string>
+      <string id="Pol-it53-GLPI-Agent-Tag_Help">
+        Name of tag for reports.
+        This can be used as an additional decision criteria on server side.
+        This directive is only for inventory or esx task only.
+        Example: "MSK" or "Company1"
       </string>
 
     </stringTable>
@@ -82,9 +89,14 @@
         <presentation id="Pol-it53-GLPI-Agent-Server-Fingerprint">
           <textBox refId="TXT-it53-GLPI-Agent-Server-Fingerprint">
             <label>Server-Fingerprint</label>
-            <defaultValue>Enter fingerprint of certificate</defaultValue>
           </textBox>
           <text>When enable server SSL certificate validation.</text>
+        </presentation>
+        <presentation id="Pol-it53-GLPI-Agent-Tag">
+          <textBox refId="TXT-it53-GLPI-Agent-Tag">
+            <label>Report tag value</label>
+          </textBox>
+          <text>Add tag for reports</text>
         </presentation>
   
 

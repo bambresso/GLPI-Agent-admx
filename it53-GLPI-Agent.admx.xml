@@ -173,6 +173,20 @@
         <text id="TXT-it53-GLPI-Agent-Server-Fingerprint" key="SOFTWARE\GLPI-Agent" valueName="ssl-fingerprint" />
       </elements>
     </policy>
+    <!-- GLPI-Agent-Tag -->
+    <policy name="Pol-it53-GLPI-Agent-Tag" 
+            class="Machine" 
+            displayName="$(string.Pol-it53-GLPI-Agent-Tag)" 
+            explainText="$(string.Pol-it53-GLPI-Agent-Tag_Help)" 
+            presentation="$(presentation.Pol-it53-GLPI-Agent-Tag)" 
+            key="Software\Policies\GLPI\Agent\1.4"
+            valueName="tag">
+      <parentCategory ref="Cat-it53-GLPI-Agent" />
+      <supportedOn ref="SUPPORTED_ProductOnly" />
+      <elements>
+        <text id="TXT-it53-GLPI-Agent-Tag" key="SOFTWARE\GLPI-Agent" valueName="tag" />
+      </elements>
+    </policy>
 
 
   </policies>
