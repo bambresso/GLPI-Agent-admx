@@ -187,6 +187,20 @@
         <text id="TXT-it53-GLPI-Agent-Tag" key="SOFTWARE\GLPI-Agent" valueName="tag" />
       </elements>
     </policy>
+    <!-- GLPI-Agent-Exclude-Inventory-Categories -->
+    <policy name="Pol-it53-GLPI-Agent-Exclude-Inventory-Categories" 
+            class="Machine" 
+            displayName="$(string.Pol-it53-GLPI-Agent-Exclude-Inventory-Categories)" 
+            explainText="$(string.Pol-it53-GLPI-Agent-Exclude-Inventory-Categories_Help)" 
+            presentation="$(presentation.Pol-it53-GLPI-Agent-Exclude-Inventory-Categories)" 
+            key="Software\Policies\GLPI\Agent\1.4"
+            valueName="no-category">
+      <parentCategory ref="Cat-it53-GLPI-Agent" />
+      <supportedOn ref="SUPPORTED_ProductOnly" />
+      <elements>
+        <text id="TXT-it53-GLPI-Agent-Exclude-Inventory-Categories" key="SOFTWARE\GLPI-Agent" valueName="no-category" />
+      </elements>
+    </policy>
 
 
   </policies>

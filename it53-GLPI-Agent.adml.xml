@@ -54,6 +54,46 @@
         This directive is only for inventory or esx task only.
         Example: "MSK" or "Company1"
       </string>
+      <string id="Pol-it53-GLPI-Agent-Exclude-Inventory-Categories">Exclude iventory categories</string>
+      <string id="Pol-it53-GLPI-Agent-Exclude-Inventory-Categories_Help">
+        Do not list given category items in inventory.
+        Multiple values can be specified, using comma as a separator. The available categories are:
+        accesslog
+        battery
+        bios
+        controller
+        cpu
+        database
+        drive
+        environment
+        hardware
+        input
+        licenseinfo
+        local_group
+        local_user
+        lvm
+        memory
+        modem
+        monitor
+        network
+        os
+        port
+        printer
+        process
+        provider
+        psu
+        registry
+        remote_mgmt
+        rudder
+        slot
+        software
+        sound
+        storage
+        usb
+        user
+        video
+        virtualmachine
+      </string>
 
     </stringTable>
     <presentationTable>
@@ -97,6 +137,12 @@
             <label>Report tag value</label>
           </textBox>
           <text>Add tag for reports</text>
+        </presentation>
+        <presentation id="Pol-it53-GLPI-Agent-Exclude-Inventory-Categories">
+          <textBox refId="TXT-it53-GLPI-Agent-Exclude-Inventory-Categories">
+            <label>Exclude iventory categories.</label>
+          </textBox>
+          <text>Multiple values can be specified, using a comma as a separator.</text>
         </presentation>
   
 
